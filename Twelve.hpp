@@ -1,3 +1,5 @@
+#ifndef TWELVE
+#define TWELVE
 #include <stdlib.h>
 #include <iostream>
 class Twelve
@@ -13,11 +15,13 @@ virtual ~Twelve() noexcept;
 
 Twelve plus(Twelve);
 Twelve minus(Twelve);
-Twelve copy();
 int compare(Twelve);
 
 unsigned char* getline();
 private:
 unsigned char* data;
 size_t size;
+int get_digit(unsigned char x);
+unsigned char set_digit(int x);
 };
+#endif
